@@ -24,21 +24,6 @@ class Solution:
 
 from typing import List
 
-class Solution:
-    def searchInsert(self, nums: List[int], target: int) -> int:
-        left, right = 0, len(nums) - 1
-
-        while left <= right:
-            mid = (left + right) // 2
-            if nums[mid] == target:  # Target found
-                return mid
-            elif nums[mid] > target:  # Target is in the left half
-                right = mid - 1
-            else:  # Target is in the right half
-                left = mid + 1
-
-        # At this point, `left` is the insertion index
-        return left
 
 if __name__ == '__main__':
     solution = Solution()
